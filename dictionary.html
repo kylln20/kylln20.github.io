@@ -19,12 +19,26 @@
                 margin: 0;
             } 
 
-            p {
+            body p {
                 background-color: rgba(231, 131, 88, 0.25); 
                 padding: 1.5%;
                 margin-left: 10px;
                 margin-right: 10px
             } 
+
+            .endNote {
+                background-color: var(--blueMed);
+                color: var(--whiteOff);
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                margin: 0;
+            }
+            
+            .endNote p {
+                margin: 0;
+                text-align: center;
+            }
 
             .navBar {
                 overflow: hidden;
@@ -49,25 +63,34 @@
                 transition: 0.5s;
             }
         </style>
-
-        <div class = "navBar"
-        style = "background-color: var(--blueDark)">
-            <a href = "index.html"> Home </a>
-            <a href = "lessons.html"> Lessons </a>
-            <a href = "oop.html"> OOP </a>
-            <a href = "aboutMe.html"> About Me</a>
-            <a href = "bibliography.html"> Bibliography </a>
-        </div> 
-        
-        <body style = "background-color: var(--whiteOff)">
-            <header>
-                <h1 style = "color: var(--coral); text-align: center">
-                    Dictionary
-                </h1>
-            </header>
-            <hr>  
-    
-        </body>
-
     </head> 
+
+    <div class = "navBar"
+    style = "background-color: var(--blueDark)">
+        <a href = "index.html"> Home </a>
+        <a href = "lessons.html"> Lessons </a>
+        <a href = "oop.html"> OOP </a>
+        <a href = "aboutMe.html"> About Me</a>
+        <a href = "bibliography.html"> Bibliography </a>
+    </div> 
+    
+    <body style = "background-color: var(--whiteOff)">
+        <header>
+            <h1 style = "color: var(--coral); text-align: center">
+                Dictionary
+            </h1>
+        </header>
+        <hr>  
+        
+        
+    </body>
+    <footer>
+        <div class = "endNote">
+            <p>
+                Contact Info: <br>
+                School Email: kayla.lin3@student.tdsb.on.ca <br>
+                Personal Email: kylln2027@gmail.com <br>
+            </p>
+        </div>
+    </footer>
 </html>
