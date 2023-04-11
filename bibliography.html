@@ -4,61 +4,7 @@
         <title>
             Bibliography - KL
         </title>
-        <style>
-            :root {
-                --blueDark: #001B2E;
-                --blueMed: #294C60;
-                --blueLig: #ADB6C4;
-                --whiteOff: #fff9ef;
-                --peach: #FFC49B;
-                --coral: #E78358;
-            }  
-
-            body {
-                font-family: monospace;
-                margin: 0;
-            } 
-
-            body p {
-                background-color: rgba(231, 131, 88, 0.25); 
-                padding: 1.5%;
-                margin-left: 10px;
-                margin-right: 10px
-            } 
-
-            .endNote {
-                background-color: var(--blueMed);
-                color: var(--whiteOff);
-                width: 100%;
-                bottom: 0;
-                margin: 0;
-            }
-            
-            .endNote p {
-                margin: 0;
-                text-align: center;
-            }
-
-            .navBar {
-                overflow: hidden;
-                background-color: var(--blueDark);
-            } 
-
-            .navBar a {
-                float: left;
-                color: var(--whiteOff);
-                text-align: center;
-                text-decoration: none;
-                padding: 12px 20px;
-                font-size: 15px;
-            }
-
-            .navBar a:hover{
-                background-color: var(--blueLig);
-                color: var(--blueDark);
-                transition: 0.5s;
-            } 
-        </style>
+        <link rel = "stylesheet" href = "styleSheet.css">
     </head> 
 
     <div class = "navBar"
@@ -68,18 +14,20 @@
         <a href = "oop.html"> OOP </a>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
+        <a href = "dictionary.html"> Dictionary </a>
     </div>
 
+    <header>
+        <h1>
+            Bibliography
+        </h1>
+    </header>
+
     <body style = "background-color: var(--whiteOff)">
-        <header>
-            <h1 style = "color: var(--coral); text-align: center">
-                Bibliography
-            </h1>
-        </header>
         <hr> 
 
         <div>
-            <p>
+            <p class = "text">
                 W3Schools. “CSS Tutorial.” W3schools.com, 2019, www.w3schools.com/css/default.asp. 
                 <br><br>
                 W3Schools. “HTML Tutorial.” W3schools.com, 2022, www.w3schools.com/html/default.asp.
@@ -92,13 +40,14 @@
             </p>
         </div>
     </body>
-    
+
     <footer>
         <div class = "endNote">
             <p>
                 Contact Info: <br>
                 School Email: kayla.lin3@student.tdsb.on.ca <br>
                 Personal Email: kylln2027@gmail.com <br>
+                03/24/2023
             </p>
         </div>
     </footer>

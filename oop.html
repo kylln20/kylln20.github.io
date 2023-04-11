@@ -14,6 +14,7 @@
         <a href = "oop.html"> OOP </a>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
+        <a href = "dictionary.html"> Dictionary </a>
     </div>
 
     <header>
@@ -33,7 +34,7 @@
             Coding and Reality
         </h2>
         <div>
-            <p>
+            <p class = "text">
                 Object Oriented Programming: A method of programming based on the concept of  “Objects” which are meant to reflect objects, (or things, or nouns) that exist in real life
             </p>
             <div style = "width: 100%; display: table">
@@ -41,23 +42,29 @@
                     <div class = "thirds" style="display: table-cell">
                         <strong>Objects</strong> in real life have <br>
                         <br>
-                        &emsp;-&nbsp;a name <br>
-                        &emsp;-&nbsp;characteristics <br>
-                        &emsp;-&nbsp;behaviors<br>
+                        <ul>
+                            <li>a name</li>
+                            <li>characteristics</li>
+                            <li>behaviours</li>
+                        </ul>
                     </div>
                     <div class = "thirds" style = "display: table-cell; width: 30%">
                         <strong>Objects</strong> in code have <br>
                         <br>
-                        &emsp;-&nbsp;an identity <br>
-                        &emsp;-&nbsp;variables <br>
-                        &emsp;-&nbsp;methods <br>
+                        <ul>
+                            <li>an identity</li>
+                            <li>variables</li>
+                            <li>methods</li>
+                        </ul>
                     </div>
                     <div class = "thirds" style = "display: table-cell">
                         <Strong>This represents</Strong> <br>
                         <br>
-                        &emsp;-&nbsp;a space in memory <br>
-                        &emsp;-&nbsp;properties/data <br>
-                        &emsp;-&nbsp;interactions done by or onto the object <br>
+                        <ul>
+                            <li>a space in memory</li>
+                            <li>properties/data</li>
+                            <li>interactions with the object</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -66,40 +73,191 @@
         <h2>
             Parts of a Class
         </h2>
-        <div>
-            
+        <div class = "flex">
+            <div>
+                <code>
+                    <p class = "code">
+                        <mark class = "comment">/**A class that represents a cat*/</mark><br><br>
+                        <mark class = "keyw">public class</mark> <mark class = "datat">Cat</mark>{ <mark class = "comment">/** identity */</mark><br>
+                        <mark class = "comment">/** characteristics */</mark><br>
+                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">String</mark> <mark class = "name">name</mark>;<br>
+                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">int</mark> <mark class = "name">age</mark>;<br>
+                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">double</mark> <mark class = "name">weight</mark>; //in pounds<br>
+                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">String</mark> <mark class = "name">furColour</mark>;<br>
+                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">boolean</mark> <mark class = "name">vaccinated</mark>;<br>
+                        <br>
+                        <mark class = "comment">/** behaviours*/</mark><br>
+                        &emsp;<mark class = "keyw">public</mark> <mark class = "datat">void</mark> <mark class = "name">vaccinate</mark>(){<br>
+                        &emsp;&emsp;<mark class = "name">vaccinated</mark> = <mark class = "value">true</mark>;<br>
+                        &emsp;}<br>
+                        &emsp;<mark class = "keyw">public</mark> <mark class = "datat">void</mark> <mark class = "name">birthday</mark>(){<br>
+                        &emsp;&emsp;<mark class = "name">age</mark>++;<br>
+                        &emsp;}<br>
+                        <br>
+                        <mark class = "comment">/** in the cat class, there needs to be a constructor*/</mark><br>
+                        &emsp;<mark class = "keyw">public</mark> <mark class = "name">Cat</mark>(<mark class = "datat">String</mark> <mark class = "name">n</mark>){<br>
+                        &emsp;&emsp;<mark class = "name">name</mark> = <mark class = "name">n</mark>;<br>
+                        &emsp;&emsp;<mark class = "name">age</mark> = 1;<br>
+                        &emsp;&emsp;<mark class = "name">weight</mark> = 0.22;<br>
+                        &emsp;&emsp;<mark class = "name">furColour</mark> = "orange";<br>
+                        &emsp;&emsp;<mark class = "name">vaccinated</mark> = false;<br>
+                        &emsp;}<br>
+                        <br>
+                        &emsp;<mark class = "keyw">public</mark> <mark class = "name">Cat</mark>(){<br>
+                        &emsp;&emsp;<mark class = "name">name</mark> = "kitty";<br>
+                        &emsp;&emsp;<mark class = "name">age</mark> = 1;<br>
+                        &emsp;&emsp;<mark class = "name">weight</mark> = 0.22;<br>
+                        &emsp;&emsp;<mark class = "name">furColour</mark> = "orange";<br>
+                        &emsp;&emsp;<mark class = "name">vaccinated</mark> = false;<br>
+                        &emsp;}<br>
+                        }<br>
+                        <br><br>
+                        <mark class = "comment">/** In a seperate class, an object of the cat class can be made*/ </mark><br>
+                        Cat kitty = new Cat("MiMi");<br>
+                        Cat ashy; <mark class = "comment">/** This object does not call the constructor, and so it currently has NULL value*/&emsp;</mark><br>
+                    </p>
+                </code>
+            </div>
+            <div>
+                <div style = "padding: 1% 1%">
+                    A <strong>Class</strong> is a template of an object<br><br>
+                    <ul>
+                        <li>An object is an instance of a class</li>
+                        <li>It has template variables and methods that can be used</li>
+                        <li>These may be accessible without making an instance (labelled with static)</li>
+                        <li>Or they may only be accessible only by making an object of that class (known as instance variables/methods)</li>
+                    </ul>
+                </div>
+                <div style = "padding: 1% 1%">
+                    To assign values:<br><br>
+                    <strong>Constructor</strong> - a special kind of “method” => same name as the class, no return type specified<br>
+                    <ul>
+                        <li>a constructor creates an objects</li>
+                        <li>it can have parameters</li>
+                        <li>there can be multiple constructors, with different inputted parameters</li>
+                        <li>similar to overloaded methods</li>
+                    </ul>
+                </div>
+                <div style = "padding: 1% 1%">
+                    When you create a object, you must either first 
+                    <ul>
+                        <li><strong>initialize</strong> it</li>
+                        <li>declare an <strong>instance</strong> of that class </li>
+                        <ul>
+                            <li>default class value is NULL</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>  
         </div>
 
+        <h2>
+            Using an Object/Class
+        </h2>
+        <div class = "text">
+            <strong>Dot Notation</strong> -&nbsp;objectName.method() or objectName.variable
+            <ul>
+                <li>methods and variables are called <strong>members</strong> of an object, because they are the data that is contained in the class</li>
+                <ul>
+                    <li>members are called on using <strong>dot notation</strong></li>
+                    <li>they might be called on to change their value (variables) or to borrow their function (methods)</li>
+                </ul>
+                <li>some objects however, can’t have their data changed after construction</li>
+            </ul>
+        </div>
 
+        <h2>
+            Representing a Class
+        </h2>
+        <div class = "text">
+            <strong>UML (Unified Modelling Language)</strong> is a standard format used to represent classes
+            <ul>
+                <li>( - ) indicates private members, usually variables</li>
+                <li>( + ) indicates public members, usually methods</li>
+                <li>variables are represented as </li>
+                <ul>
+                    <li> +/- varName: dataType</li>
+                </ul>
+                <li>methods are represented as</li>
+                <ul>
+                    <li>+/- methodName(paramName: dataType): returnType</li>
+                </ul>
+            </ul>
+        </div>
+
+        <h1 style = "text-align: left">
+            Inheritance
+        </h1>
+        <h2>
+            Definition
+        </h2>
+        <div class = "text">
+            <ul>
+                <li>Inheritance is when a class takes on the members (methods and variables) of another class, referred to as its parent class (aka a superclass)</li>
+                <li>Java classes can only inherit from one class</li>
+                <ul>
+                    <li>but can have a very long chain of extended classes</li>
+                </ul>
+                <li>All java classes by default inherit from the Object class (a thing that exists in java)</li>
+            </ul>
+        </div>
+        <h2>
+            Implementing Inheritence
+        </h2>
         <code>
-            <pre class = "code"> 
-    /**
-    From an assignment given about 
-    object oriented programming
-    */
-    public class Airplane{ <mark>/** identity */</mark>  
-        <mark>/** characteristics */</mark>
-        private int gasLevel;
-        private String landingGear;
-        private String doorStatus;
-        private int passengers;
-        
-        public Airplane(){
-            gasLevel = 100;
-            landingGear = "Down";
-            doorStatus = "Open";
-            passengers = 100;
-        }   
-        <mark>/** behaviours*/</mark>
-        public void openDoor(){
-            doorStatus = "Open";
-        }
-        public void closeDoor(){
-            doorStatus = "Closed";
-        }
-    }
-            </pre>
+            <p class = "code">
+                <mark class = "keyw">public class</mark> <mark class = "name">Subclass</mark> extends Superclass{ <br>
+                    &emsp;<mark class = "keyw">public</mark> <mark class = "name">Subclass</mark>(){ <br>
+                        &emsp;&emsp;<mark class = "name">super</mark>(); <br>
+                    &emsp;}<br>
+                } <br>
+            </p>
         </code>
+        <div class = "text">
+            super(); calls on the constructor of the extended class
+            <ul>
+                <li>if used, must be the first line in the subclass constructor</li>
+                <li>the superclass (Superclass) must at least have a no-param constructor to avoid errors</li>
+            </ul>
+        </div>
+
+        <h2>
+            The "this" keyword
+        </h2>
+        <div class = "text">
+            <strong>this</strong> keyword - Used to refer to elements of the class being worked in, especially when other elements have the same name <br><br>
+            It can be used in many instances:<br>
+            <ul>
+                <li>distinguish between two or more constructors</li>
+                <ul>
+                    <li>substitue an above default constructor</li>
+                    <li>similar to super() but with constructors contained in that element</li>
+                </ul>
+                <li>distinguish between variables in a parent and child class that have the same name</li>
+                <li>distinguish between methods in a parent and child class that have the same name</li>
+                <li>representing the object <strong>this</strong> is being called in</li>
+                <ul>
+                    <li>distinguish between a variable and a local variable (usually parameter) of the same name</li>
+                </ul>
+            </ul>
+        </div>
+
+        <h2>
+            Inheritence and Variables
+        </h2>
+        <div class = "text">
+            Subclasses only inherit <strong>public</strong> members of its superclass<br>
+            In order to access the variables of a superclass, which in AP CS must be private, one creates <stong>get</stong> and <strong>set</strong> methods in the superclass<br><br>
+            <strong>Get</strong> (accessor) methods 
+            <ul>
+                <li>returns the value of a variable in a class</li>
+            </ul>
+            <strong>Set</strong> (mutator) methods
+            <ul>
+                <li>changes the member data in an object</li>
+                <li>overrides the original variable value</li>
+            </ul>
+        </div>
 
         <footer>
             <div class = "endNote">

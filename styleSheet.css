@@ -5,6 +5,11 @@
     --whiteOff: #fff9ef;
     --peach: #FFC49B;
     --coral: #E78358;
+    --comment: #3883af;
+    --datat: #af76db;
+    --num: #EEE060;
+    --keyw: #6368e4;
+    --name:#d86767;
 }  
 
 body {
@@ -12,16 +17,10 @@ body {
     margin: 0;
 } 
 
-body p {
-    background-color: rgba(231, 131, 88, 0.25); 
-    padding: 1.5%;
-    margin: 1.5%;
-    word-wrap: break-word;
-} 
-
 h1 {
     color: var(--coral);
     text-align: center;
+    margin: 1%;
 }
 
 h2 {
@@ -35,6 +34,13 @@ h3 {
     text-align: left;
     margin: 1% 1.5%;
 }
+
+.text{
+    background-color: rgba(231, 131, 88, 0.25); 
+    padding: 1.5%;
+    margin: 1.5%;
+    word-wrap: break-word;
+} 
 
 .endNote {
     background-color: var(--blueMed);
@@ -70,23 +76,45 @@ h3 {
     transition: 0.5s;
 }
 
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
 .code{
     border-radius: 2%;
     background-color: var(--blueDark);
-    margin: 2% 15%;
+    margin: 2% 2%;
     color: var(--blueLig);
     box-shadow: 2% 2% var(--blueMed);
-    overflow-x: auto;
-    scrollbar-color: var(--blueMed);
-}
-
-.code pre{
+    word-wrap: break-word;
     margin: 3% 3%;
+    padding: 1% 1%;
 }
 
-.code mark {
-    color: var(--blueDark);
-    background-color: var(--peach);
+.comment{
+    background-color: var(--blueDark);
+    color: var(--comment);
+}
+
+.keyw{
+    background-color: var(--blueDark);
+    color: var(--keyw);
+}
+
+.datat{
+    background-color: var(--blueDark);
+    color: var(--datat);
+}
+
+.name{
+    background-color: var(--blueDark);
+    color: var(--name);
+}
+
+.value{
+    background-color: var(--blueDark);
+    color: var(--value);
 }
 
 .thirds{
