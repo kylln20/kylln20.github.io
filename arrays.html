@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>
+            Dictionary - KL
+        </title>
+        <link rel = "stylesheet" href = "styleSheet.css">
+    </head> 
+
+    <div class = "navBar"
+    style = "background-color: var(--blueDark)">
+        <a href = "index.html"> Home </a>
+        <a href = "lessons.html"> Lessons </a>
+        <a href = "oop.html"> OOP </a>
+        <a href = "arrays.html"> Arrays </a>
+        <a href = "aboutMe.html"> About Me</a>
+        <a href = "bibliography.html"> Bibliography </a>
+        <a href = "dictionary.html"> Dictionary </a>
+    </div> 
+
+    <header>
+        <h1>
+            Arrays
+        </h1>
+    </header>
+
+    <body style = "background-color: var(--whiteOff)">
+        <hr>  
+        <h3>Table of Contents Here</h3>
+        <h2>Basics</h2>
+        <div class = "text">
+            <p>
+                An <strong>array</strong> is a set block of <strong>consecutive memory locations</strong><br>
+                Each location contains a piece of data called an <strong>element</strong><br>
+                All elements in an array have to be of the same data type
+                <ul><li>For example, you can use an array to store marks, but you cannot store some marks with integer representations (eg. 30) and some marks as decimal representations (eg. 30.0)</li></ul>
+            </p>
+        </div>
+        <h3>Initialization</h3>
+        <p class = "text">
+            An array is <strong>declared</strong> as: <code>dataType[] varName;</code><br>
+            The square brackets indicate that it is an array
+        </p>
+        <code>
+            <p class = "code">
+                <mark class = "comment">/**Imagine we have a class representing a cat-only vet clinic<br>
+                This array represents the registered patients in that clinic*/</mark><br>
+                <mark class = "keyw">private </mark><mark class = "datat">Cat</mark>[] <mark class = "name">patients</mark>;<br>
+            </p>
+        </code>
+        <div class = "text">
+            <p>
+                When <strong>initializing</strong> an array, either length can be set or values can be set<br>
+                <br>
+                To set length after a declaration:<br>
+                &emsp;&emsp;arrayName = new dataType[length];<br>
+                To set length with a declaration:<br>
+                &emsp;&emsp;dataType[] arrayName = new dataType[length];<br><br>
+                When this is done, all elements in the array will be set to the default value for that data type. For example: <br>
+                <ul>
+                    <li>int array elements are set to 0</li>
+                    <li>boolean array elements are set to false</li>
+                    <li>object (such as String) array elements are set to NULL</li>
+                </ul>
+
+                To set values after a declaration:<br>
+                &emsp;&emsp;arrayName = {element1, element2, element3, ...};<br>
+                To set values with a declaration:<br>
+                &emsp;&emsp;dataType[] arrayName = {element1, element2, element3, ...};<br>
+            </p>
+        </div>
+        <code>
+            <p class = "code">
+                <mark class = "comment">/** in the CatClinic class: */</mark><br>
+                <mark class = "keyw">private </mark><mark class = "datat">boolean</mark>[] <mark class = "name">bookedTimeSlot</mark> = <mark class = "keyw">new</mark> <mark class = "datat">boolean</mark>[20];<mark class = "comment"> /** setting length */</mark><br>
+                <mark class = "keyw">private </mark><mark class = "datat">String</mark>[] <mark class = "name">inVets</mark> = {"Dr. Anders", "Dr. Carmen", "Dr. Derrick", "Dr. Boris"};<mark class = "comment"> /** setting values */</mark><br>
+            </p>
+        </code>
+
+        <h3>Elements and Indexes</h3>
+        <div class = "text">
+            <p>
+                Each element is kept track of based on its location in the block with <strong>indexes/indices</strong><br>
+                Since arrays are allocated a set block of memory space, they also have a set length. This length can be accessed with arrayName.length<br>
+                There are length number of elements, so there must be a set number of indexes. The indices of an array start at 0 and go up to (array.length)-1.<br>
+                If an index is used that doesn't exist for an array, one's code won't compile. This error is called an ArrayIndexOutOfBoundsException.<br>
+                <br>
+                Example: Say that there is an array of pet names<br>
+                &emsp;&emsp;String[] catNames = {"Jiji", "Haku", "Totoro", "Teto", "Susu"};
+                <table>
+                    <tr>
+                        <th>Indexes</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>Names</th>
+                        <td>Jiji</td>
+                        <td>Haku</td>
+                        <td>Totoro</td>
+                        <td>Teto</td>
+                        <td>Susu</td>
+                    </tr>
+                </table>
+                Indices can be given as constants, as variables, and even as expressions, as long as it evaluates to an int value<br> 
+                <code>
+                    <p class = "code">
+                        <mark class = "comment">/**Using a constant*/</mark><br>
+                        <mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">catNames</mark>[0]);<mark class = "comment">/**Prints Jiji*/</mark><br>
+                        <mark class = "comment">/**Using a variable*/</mark><br>
+                        <mark class = "datat">int</mark> <mark class = "name">temp</mark> = 2;
+                        <mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">catNames</mark>[temp]);<mark class = "comment">/**Prints Totoro*/</mark><br>
+                        <mark class = "comment">/**Using an expression */</mark><br>
+                        <mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">catNames</mark>[<mark class = "datat">Math</mark>.<mark class = "name">pow</mark>(2, 2)]);<mark class = "comment">/**Prints Susu*/</mark><br>
+                    </p>
+                </code>
+            </p>
+        </div>
+    </body>
+    <footer>
+        <div class = "endNote">
+            <p>
+                Contact Info: <br>
+                School Email: kayla.lin3@student.tdsb.on.ca <br>
+                Personal Email: kylln2027@gmail.com <br>
+                03/24/2023
+            </p>
+        </div>
+    </footer>
+</html>

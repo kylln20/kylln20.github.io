@@ -4,6 +4,8 @@
     --blueLig: #c1ccdf;
     --whiteOff: #fff9ef;
     --peach: #FFC49B;
+    --peachBG: rgba(231, 131, 88, 0.25); 
+    --red: #d86767;
     --coral: #E78358;
     --comment: #3883af;
     --datat: #af76db;
@@ -26,7 +28,7 @@ h1 {
 h2 {
     color: var(--coral);
     text-align: left;
-    margin: 1%;
+    margin: 1.5% 1% 0.5%;
 }
 
 h3 {
@@ -35,11 +37,25 @@ h3 {
     margin: 1% 1.5%;
 }
 
+table {
+    background-color: var(--whiteOff);
+    border-collapse: collapse;
+    color: var(--red);
+    width: 100%;
+    
+}
+
+td, th{
+    text-align: center;
+    border: solid 1px var(--red);
+}
+
 .text{
-    background-color: rgba(231, 131, 88, 0.25); 
+    background-color: var(--peachBG); 
     padding: 1.5%;
     margin: 1.5%;
     word-wrap: break-word;
+    line-height: 18px;
 } 
 
 .endNote {
@@ -82,14 +98,13 @@ h3 {
 }
 
 .code{
-    border-radius: 2%;
+    border-radius: 5px;
     background-color: var(--blueDark);
-    margin: 2% 2%;
     color: var(--blueLig);
     box-shadow: 2% 2% var(--blueMed);
     word-wrap: break-word;
     margin: 3% 3%;
-    padding: 1% 1%;
+    padding: 2%;
 }
 
 .comment{
