@@ -10,9 +10,13 @@
     <div class = "navBar"
     style = "background-color: var(--blueDark)">
         <a href = "index.html"> Home </a>
-        <a href = "lessons.html"> Lessons </a>
-        <a href = "oop.html"> OOP </a>
-        <a href = "arrays.html"> Arrays </a>
+        <div class = "dropdown">
+            <a href = "lessons.html">Lessons &#9660;</a>
+            <div class = "dropdown-content">
+                <a href = "oop.html"> OOP </a>
+                <a href = "arrays.html"> Arrays </a>
+            </div>
+        </div>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
         <a href = "dictionary.html"> Dictionary </a>
@@ -30,10 +34,10 @@
         <h2>Basics</h2>
         <div class = "text">
             <p>
-                An <strong>array</strong> is a set block of <strong>consecutive memory locations</strong><br>
-                Each location contains a piece of data called an <strong>element</strong><br>
-                All elements in an array have to be of the same data type
-                <ul><li>For example, you can use an array to store marks, but you cannot store some marks with integer representations (eg. 30) and some marks as decimal representations (eg. 30.0)</li></ul>
+                An <strong>array</strong> is a set block of <strong>consecutive memory locations</strong>.
+                Each location contains a piece of data called an <strong>element</strong>.
+                All elements in an array have to be of the same data type.
+                <ul><li>For example, you can use an array to store marks, but you cannot store some marks with integer representations (eg. 30) and some marks as decimal representations (eg. 30.5)</li></ul>
             </p>
         </div>
         <h3>Initialization</h3>
@@ -43,8 +47,8 @@
         </p>
         <code>
             <p class = "code">
-                <mark class = "comment">/**Imagine we have a class representing a cat-only vet clinic<br>
-                This array represents the registered patients in that clinic*/</mark><br>
+                <mark class = "comment">/**Imagine we have a class representing a cat shelter<br>
+                This array represents the registered cats in that shelter*/</mark><br>
                 <mark class = "keyw">private </mark><mark class = "datat">Cat</mark>[] <mark class = "name">patients</mark>;<br>
             </p>
         </code>
@@ -71,7 +75,8 @@
         </div>
         <code>
             <p class = "code">
-                <mark class = "comment">/** in the CatClinic class: */</mark><br>
+                <mark class = "comment">/** in the CatShelter class*/</mark><br>
+                <mark style = "color: red; background-color: var(--blueDark);">NOTE: THIS EXAMPLE WILL BE REWRITTEN</mark><br>
                 <mark class = "keyw">private </mark><mark class = "datat">boolean</mark>[] <mark class = "name">bookedTimeSlot</mark> = <mark class = "keyw">new</mark> <mark class = "datat">boolean</mark>[20];<mark class = "comment"> /** setting length */</mark><br>
                 <mark class = "keyw">private </mark><mark class = "datat">String</mark>[] <mark class = "name">inVets</mark> = {"Dr. Anders", "Dr. Carmen", "Dr. Derrick", "Dr. Boris"};<mark class = "comment"> /** setting values */</mark><br>
             </p>
@@ -97,7 +102,7 @@
                         <td>4</td>
                     </tr>
                     <tr>
-                        <th>Names</th>
+                        <th>Elements</th>
                         <td>Jiji</td>
                         <td>Haku</td>
                         <td>Totoro</td>
@@ -105,7 +110,7 @@
                         <td>Susu</td>
                     </tr>
                 </table>
-                Indices can be given as constants, as variables, and even as expressions, as long as it evaluates to an int value<br> 
+                <br>Indices can be given as constants, as variables, and even as expressions, as long as it evaluates to an int value
                 <code>
                     <p class = "code">
                         <mark class = "comment">/**Using a constant*/</mark><br>
@@ -115,9 +120,122 @@
                         <mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">catNames</mark>[temp]);<mark class = "comment">/**Prints Totoro*/</mark><br>
                         <mark class = "comment">/**Using an expression */</mark><br>
                         <mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">catNames</mark>[<mark class = "datat">Math</mark>.<mark class = "name">pow</mark>(2, 2)]);<mark class = "comment">/**Prints Susu*/</mark><br>
+                        <br>
+                        <mark class = "comment">/** One can also change the value of an element at an index */ <br><br> /** To change Susu to Watari */</mark><br>
+                        <mark class = "name">catNames</mark>[4] = "Watari";
                     </p>
                 </code>
             </p>
+        </div>
+        <h3>
+            Why Arrays?
+        </h3>
+        <div class = "text">
+            <p>
+                Arrays are convenient for accessing and updating values, since they are all stored under one variable name, instead of in multiple.<br>
+                Also, due to the use of indices, one can iterate through an array using a loop to access stored values, instead of repeating lines of code for each value.<br>
+            </p>
+        </div>
+
+        <h2>
+            Methods
+        </h2>
+        <div class = "text">
+            Since arrays are objects, there also exists an Array class, which contains methods that can be used to manipulate and get data from arrays. <br>There also exist helpful methods related to arrays, for which there are also descriptions below.<br><br>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Parameter(s)</th>
+                    <th width = 67%>Description</th>
+                </tr>
+                <tr>
+                    <td>length</td>
+                    <td>N/A</td>
+                    <td>Returns the number of elements in the array. <b>NOTE:</b> because length is a property of an array and not a method, round brackets aren't needed to call on it<br></td>
+                </tr>
+                <tr>
+                    <td>toString</td>
+                    <td>N/A</td>
+                    <td>Returns as a string, the elements of the array, in the format element1, element2, element3...</td>
+                </tr>
+                <tr>
+                    <td>split</td>
+                    <td>(optional) String separator<br>
+                        (optional) int limit </td>
+                    <td>A string method, it takes a string, and splits it where there is the separator, a number of times based on the limit. By default, the seperator is an empty space and the limit is 0. For more info, see this link <a href = "https://www.geeksforgeeks.org/split-string-java-examples/">here</a></td>
+                </tr>
+            </table>
+        </div>
+        <h2>Arrays In Methods</h2>
+        <div class = "text">
+            Arrays can be passed to, or returned from methods. Something to note: when an array is passed to a method, any changes made to the array in that method are NOT kept<br>
+            <code>
+                <p class = "code">
+                    <mark class = "comment">/** an array passed as a param */</mark><br>
+                    <mark class = "keyw">public void</mark> <mark class = "name">displayCatNames</mark>(<mark class = "datat">Cat</mark>[] <mark class = "name">names</mark>){<br>
+	                &emsp;<mark class = "keyw">for</mark>(<mark class = "datat">int</mark> i = 0; i &lt; <mark class = "name">names</mark>.length(); i++){<br>
+		            &emsp;&emsp;<mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">names</mark>[i].<mark class = "name">getName</mark>());<br>
+	                &emsp;}<br>
+                    }<br>
+                    <br>
+                    <mark class = "comment">/** an array as a return type */</mark><br>
+                    <mark class = "keyw">public</mark> <mark class = "datat">boolean</mark>[] <mark class = "name">shortNames</mark>(){<br>
+                    &emsp;<mark class = "datat">boolean</mark>[] <mark class = "name">isShort</mark> = new <mark class = "datat">boolean</mark>[<mark class = "name">names</mark>.length];<br>
+                    &emsp;<mark class = "keyw">for</mark>(<mark class = "datat">int</mark> i = 0; i &lt; <mark class = "name">names</mark>.length(); i++){<br>
+                        &emsp;&emsp;<mark class = "keyw">if</mark>(<mark class = "name">name</mark>[i].length &lt; 5){<br>
+                        &emsp;&emsp;&emsp;<mark class = "name">isShort</mark>[i] = true;<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;}<br>
+                    }<br>
+                </p>
+            </code>
+        </div>
+
+        <h2>2D Arrays</h2>
+        <div class = "text">
+            When one needs to store a "grid" of values of the same type, they can use a 2D array.<br>The number of arrays is similar to the number of rows in a grid. <br> The number of elements in an individual array is similar to the number of columns in that row.<br>
+
+            
+        </div>
+        <h3> Initialization </h3>
+        <div class = "text">
+            Like with one dimensional arrays, a 2D array can be initialized with default values (0 for integers, false for booleans, NULL for objects, etc.), or with set values.<br><br>
+            <b>Initialization with Default Values</b>
+            <code>
+                <p class = "code">
+                    <mark class = "comment">/*dataType[][] name = new dataType[# of rows][# of columns]*</mark><br>
+                    <mark class = "comment">/*all values initialized to 0*/</mark><br>
+                    <mark class = "datat">int</mark>[][] <mark class = "name">numGrid</mark> = new <mark class = "datat">int</mark>[5][5];<br><br>
+                    <mark class = "comment">/*all values initialized to NULL*/</mark><br>
+                    <mark class = "datat">Sting</mark>[][] <mark class = "name">stringsGrid</mark> = new <mark class = "datat">String</mark>[2][3];<br>
+                </p>
+            </code>
+            <b>Initialization with Set Values</b>
+            <code>
+                <p class = "code">
+                    <mark class = "comment">/*dataType[][] name = {{a1, a2, a3...}, {b1, b2, b3...}, ...}*/</mark><br><br>
+                    <mark class = "comment">/*This is a <strong>rectangular</strong> 2D array, where all the rows have the same number of elements<br>This kind of array is always made when initializing by default value*/</mark><br>
+                    <mark class = "datat">int</mark>[][] <mark class = "name">numGrid</mark> = {{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}};<br><br>
+                    <mark class = "comment">/*This is a <strong>ragged</strong> 2D array, where NOT all the rows have the same number of elements*/</mark><br>
+                    <mark class = "datat">Sting</mark>[][] <mark class = "name">stringsGrid</mark> = {{"a"}, {"aa", "bb"}, {"aaa", "bbb", "ccc"}, {"aaaa", "bbbb", "cccc", "dddd"}};<br>
+                </p>
+            </code>
+        </div>
+
+        <h2>
+            Traversal
+        </h2>
+        <div class = "text">
+            As noted earlier, arrays are convenient in that one can iterate through all the elements stored in an array with loops. A special loop that performs this function is the for-each loop.
+        </div>
+        <h3>
+            For-each loops
+        </h3>
+        <div class = "text">
+            Syntax: for(dataType name: arrayName) { do stuff } <br>
+            A for-each loop goes through every single element in an array, in increasing order (indices going from 0 to array.length-1)
+            For each iteration of the loop, it makes a copy of the value at that element<br>
+            Because of this, you can't change the values of the elements in the array<br>
         </div>
     </body>
     <footer>

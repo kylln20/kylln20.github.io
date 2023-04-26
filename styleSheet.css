@@ -42,7 +42,7 @@ table {
     border-collapse: collapse;
     color: var(--red);
     width: 100%;
-    
+
 }
 
 td, th{
@@ -56,6 +56,7 @@ td, th{
     margin: 1.5%;
     word-wrap: break-word;
     line-height: 18px;
+    border-radius: 1.5%
 } 
 
 .endNote {
@@ -77,18 +78,56 @@ td, th{
     background-color: var(--blueDark);
 } 
 
-.navBar a {
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.navBar a, .navBar .dropdown a , .navBar .dropdown .dropdown-content a{
+    background-color: var(--blueDark);
     float: left;
     color: var(--whiteOff);
     text-align: center;
     text-decoration: none;
     padding: 12px 20px;
     font-size: 15px;
+    margin: 0;
 } 
 
-.navBar a:hover {
+a:hover{
     background-color: var(--blueLig);
     color: var(--blueDark);
+    transition: 0.5s;
+}
+
+.dropdown:hover a, .navBar .dropdown .dropdown-content a:hover{
+    background-color: var(--blueLig);
+    color: var(--blueDark);
+    transition: 0.5s;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 41px;
+    background-color: var(--blueDark);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    background-color: var(--blueDark);
+    float: none;
+    color: var(--whiteOff);
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    width: 75%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
     transition: 0.5s;
 }
 
