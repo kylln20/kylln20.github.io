@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>
+            ArrayLists
+        </title>
+        <link rel = "stylesheet" href = "styleSheet.css">
+    </head> 
+
+    <div class = "navBar"
+    style = "background-color: var(--blueDark)">
+        <a href = "index.html"> Home </a>
+        <div class = "dropdown">
+            <a href = "lessons.html">Lessons &#9660;</a>
+            <div class = "dropdown-content">
+                <a href = "oop.html"> OOP </a>
+                <a href = "arrays.html"> Arrays </a>
+                <a href = "arraylists.html">ArrayLists</a>
+                <a href = "sort+search.html">Sorting and Searching</a>
+            </div>
+        </div>
+        <a href = "aboutMe.html"> About Me </a>
+        <a href = "bibliography.html"> Bibliography </a>
+    </div> 
+
+    <header>
+        <h1>
+            ArrayLists
+        </h1>
+    </header>
+
+    <body style = "background-color: var(--whiteOff)">
+        <hr>  
+        <h2>Basics</h2>
+        <div class = "text">
+            <p>
+                Arraylists, as the name suggests, are similar to arrays. There are some key differences though.<br>
+                Unlike arrays, arraylists have a DYNAMIC memory space. This means: one can change the number of values stored in the array, removing and adding “spaces”, or indexes instead of just changing existing values. While this does lead arraylists to take longer time to process, they can also be more convenient.<br>
+                <ul>
+                    <li>The number of "spaces" in an array is called the <strong>capacity</strong> of the arraylist</li>
+                    <li>The number of filled spaces in an arraylist is called the <strong>size</strong> of the arraylist</li>
+                </ul>
+                The elements stored in an arraylist must be OBJECTS, or not primitive data types. So arraylists cannot be declared to store int, float, or boolean type values, among other data types. Thankfully, for each of these data types, Java has object classes that can be automatically converted into these primitive data types.<br>
+                <ul>
+                    <li>int can be converted to and converted from the Integer class</li>
+                    <li>double can be converted to and converted from the Double class</li>
+                    <li>boolean can be converted to and from the Boolean class </li>
+                </ul>
+            </p>
+        </div>
+        <h2>Syntax</h2>
+        <div class = "text">
+            <p>
+                ArrayLists are generally initialized as ArrayList<dataType> name = new ArrayList<dataType>(opt. size). Within the brackets, one can specify the starting capacity. If it isn’t specified, then the default capacity is set to 10. When initialized this way, none of the “spaces” within the capacity actually have values. These values are assigned with ArrayList methods, to be mentioned later.<br>
+                <code>
+                    <p class = "code">
+                        <mark class = "comment">/*<br>&ensp;To make an arraylist to store whole number values:<br>&ensp;since ints are a primitive data type, the Integer class is used */</mark><br>
+                        <mark class = "datat">ArrayList</mark>&lt;<mark class = "datat">Integer</mark>&gt; <mark class = name>numbers</mark> = <mark class = "keyw">new</mark> <mark class = "datat">ArrayList</mark>&lt;<mark class = "datat">Integer</mark>&gt;();<br>
+                        <br>
+                        <mark class = "comment">/*<br>&ensp;To make an arraylist to store words:<br>&ensp;since 5 was added as a parameter, the capacity of the arraylist is set to 5 "spaces."<br>&ensp;By default, this capacity is set to 10<br>&ensp;If by adding elements, the size exceeds the capacity, the capacity will by default double */</mark><br>
+                        <mark class = "datat">ArrayList</mark>&lt;<mark class = "datat">String</mark>&gt; <mark class = name>words</mark> = <mark class = "keyw">new</mark> <mark class = "datat">ArrayList</mark>&lt;<mark class = "datat">String</mark>&gt;(5);<br>
+                        <br>
+                        <mark class = "comment">/*<br>&ensp;To make an arraylist to store Cats (a self-written class in the OOP tutorial example):<br> */</mark><br>
+                        <mark class = "datat">ArrayList</mark>&lt;<mark class = "datat">Cat</mark>&gt; <mark class = name>cats</mark> = <mark class = "keyw">new</mark> <mark class = "datat">ArrayList</mark>&lt;<mark class = "datat">Cat</mark>&gt;();<br>
+                        <br>
+                    </p>
+                </code>
+            </p>
+        </div>
+        <h2>Arrays Vs ArrayLists</h2>
+        <h3>Similarities</h3>
+        <div class = "text">
+            Both arraylists and arrays are used to:
+            <ul>
+                <li>store multiple values, known as elements, under one variable name</li>
+                <li>access and change values with indexes/indices that start at 0</li>
+                <li>store loop traversable data for convenience (one has to be careful with arraylists, more on that later</li>
+            </ul>
+        </div>
+        <h3>Differences</h3>
+        <div class = "text" style = "padding: 1.5%">
+            <table style = "width: 100%;">
+                <tr>
+                    <th style = "width: 50%">Arrays</th>
+                    <th style = "width: 50%">ArrayLists</th>
+                </tr>
+                <tr>
+                    <td>Have a fixed length, accessed by .length</td>
+                    <td>Have a dynamic length, accessed by .size()</td>
+                </tr>
+                <tr>
+                    <td>Can store primitive and object data types</td>
+                    <td>Can only store object data types</td>
+                </tr>
+                <tr>
+                    <td> Generally traversed with a for loop or a for each loop</td>
+                    <td> Easier to traversed with a while loop and a iterator/index-counter</td>
+                </tr>
+            </table>
+        </div>
+        <h2>ArrayList Methods</h2>
+        <div class = "text">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>size()</td>
+                    <td>returns the size of the arraylist (int)</td>
+                </tr>
+                <tr>
+                    <td>isEmpty()</td>
+                    <td>returns whether or not the arraylist is empty (boolean) </td>
+                </tr>
+                <tr>
+                    <td>add( [opt int i], Object obj) </td>
+                    <td>inserts the Object obj at the i-th index, and pushes all other elements to the right. If i is not given, then it adds obj to the end of the arraylist</td>
+                </tr>
+                <tr>
+                    <td>set(int i, Object obj)</td>
+                    <td>sets the element at index i to the value obj, and returns the old value at index i</td>
+                </tr>
+                <tr>
+                    <td>get(int i)</td>
+                    <td>returns the element at index i</td>
+                </tr>
+                <tr>
+                    <td>remove(int i)</td>
+                    <td>removes the element at index i, as well as returns it</td>
+                </tr>
+                <tr>
+                    <td>contains(Object obj)</td>
+                    <td>returns whether or not obj is located in the arraylist (boolean)</td>
+                </tr>
+                <tr>
+                    <td>indexOf(Object obj)</td>
+                    <td>returns the index of the first occurence of the Object obj in the arraylist (int). If obj is not present in the arraylist, then it returns -1.</td>
+                </tr>
+            </table>
+        </div>
+        <h2>Traversal</h2>
+        <div class = "text">
+            Since one can remove and add elements to an arraylist, that means it's length as well as the indexes of values can change. This makes using for or for-each loops difficult, since both can't (conveniently) keep track of shifting elements.<br> For and for-each loops can still be used, but (for-each loops especially) should only be used in instances where no elements are being removed.
+        </div>
+    </body>
+    <footer>
+        <div class = "endNote">
+            <p>
+                Contact Info: <br>
+                School Email: kayla.lin3@student.tdsb.on.ca <br>
+                Personal Email: kylln2027@gmail.com <br>
+                03/24/2023
+            </p>
+        </div>
+    </footer>
+</html>
