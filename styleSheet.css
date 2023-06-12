@@ -48,6 +48,7 @@ table {
 td, th{
     text-align: center;
     border: solid 1px var(--red);
+    padding: 0.5%
 }
 
 .text{
@@ -66,6 +67,7 @@ td, th{
     width: 100%;
     bottom: 0;
     margin: 0;
+    padding: 2%;
 }
 
 .endNote p {
@@ -83,7 +85,7 @@ td, th{
     overflow: hidden;
 }
 
-.navBar a, .navBar .dropdown a , .navBar .dropdown .dropdown-content a{
+.navBar a, .navBar .dropdown a, .navBar .dropdown .dropdown-content a {
     background-color: var(--blueDark);
     float: left;
     color: var(--whiteOff);
@@ -93,6 +95,10 @@ td, th{
     font-size: 15px;
     margin: 0;
 } 
+
+.navBar .dropdown .dropdown-content a{
+    float: right;
+}
 
 a:hover{
     background-color: var(--blueLig);
@@ -106,13 +112,13 @@ a:hover{
     transition: 0.5s;
 }
 
-
 .dropdown-content {
     display: none;
     position: absolute;
     margin-top: 41px;
     background-color: var(--blueDark);
     z-index: 1;
+    max-width: 175px;
 }
 
 .dropdown-content a{
