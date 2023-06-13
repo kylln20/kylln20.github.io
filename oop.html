@@ -22,6 +22,7 @@
         </div>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
+        <a href = "isp.html"> ISP </a>
     </div> 
 
     <header>
@@ -32,8 +33,6 @@
 
     <body style = "background-color: var(--whiteOff)">
         <hr> 
-        <h3> table of contents here </h3>
-
         <h1>
             Basics of OOP
         </h1>
@@ -87,41 +86,41 @@
                         <mark class = "comment">/**A class that represents a cat*/</mark><br><br>
                         <mark class = "keyw">public class</mark> <mark class = "datat">Cat</mark>{ <mark class = "comment">/** identity */</mark><br>
                         <mark class = "comment">/** characteristics */</mark><br>
-                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">String</mark> <mark class = "name">name</mark>;<br>
-                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">int</mark> <mark class = "name">age</mark>;<br>
-                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">double</mark> <mark class = "name">weight</mark>; //in pounds<br>
-                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">String</mark> <mark class = "name">furColour</mark>;<br>
-                        &emsp;<mark class = "keyw">private</mark> <mark class = "datat">boolean</mark> <mark class = "name">vaccinated</mark>;<br>
+                        &emsp;&emsp;<mark class = "keyw">private</mark> <mark class = "datat">String</mark> <mark class = "name">name</mark>;<br>
+                        &emsp;&emsp;<mark class = "keyw">private</mark> <mark class = "datat">int</mark> <mark class = "name">age</mark>;<br>
+                        &emsp;&emsp;<mark class = "keyw">private</mark> <mark class = "datat">double</mark> <mark class = "name">weight</mark>; //in pounds<br>
+                        &emsp;&emsp;<mark class = "keyw">private</mark> <mark class = "datat">String</mark> <mark class = "name">furColour</mark>;<br>
+                        &emsp;&emsp;<mark class = "keyw">private</mark> <mark class = "datat">boolean</mark> <mark class = "name">vaccinated</mark>;<br>
                         <br>
                         <mark class = "comment">/** behaviours*/</mark><br>
-                        &emsp;<mark class = "keyw">public</mark> <mark class = "datat">void</mark> <mark class = "name">vaccinate</mark>(){<br>
-                        &emsp;&emsp;<mark class = "name">vaccinated</mark> = <mark class = "value">true</mark>;<br>
-                        &emsp;}<br>
-                        &emsp;<mark class = "keyw">public</mark> <mark class = "datat">void</mark> <mark class = "name">birthday</mark>(){<br>
-                        &emsp;&emsp;<mark class = "name">age</mark>++;<br>
-                        &emsp;}<br>
+                        &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "datat">void</mark> <mark class = "name">vaccinate</mark>(){<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">vaccinated</mark> = <mark class = "value">true</mark>;<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "datat">void</mark> <mark class = "name">birthday</mark>(){<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">age</mark>++;<br>
+                        &emsp;&emsp;}<br>
                         <br>
                         <mark class = "comment">/** in the cat class, there needs to be a constructor*/</mark><br>
-                        &emsp;<mark class = "keyw">public</mark> <mark class = "name">Cat</mark>(<mark class = "datat">String</mark> <mark class = "name">n</mark>){<br>
-                        &emsp;&emsp;<mark class = "name">name</mark> = <mark class = "name">n</mark>;<br>
-                        &emsp;&emsp;<mark class = "name">age</mark> = 1;<br>
-                        &emsp;&emsp;<mark class = "name">weight</mark> = 0.22;<br>
-                        &emsp;&emsp;<mark class = "name">furColour</mark> = "orange";<br>
-                        &emsp;&emsp;<mark class = "name">vaccinated</mark> = false;<br>
-                        &emsp;}<br>
+                        &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "name">Cat</mark>(<mark class = "datat">String</mark> <mark class = "name">n</mark>){<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">name</mark> = <mark class = "name">n</mark>;<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">age</mark> = 1;<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">weight</mark> = 0.22;<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">furColour</mark> = "orange";<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">vaccinated</mark> = false;<br>
+                        &emsp;&emsp;}<br>
                         <br>
-                        &emsp;<mark class = "keyw">public</mark> <mark class = "name">Cat</mark>(){<br>
-                        &emsp;&emsp;<mark class = "name">name</mark> = "kitty";<br>
-                        &emsp;&emsp;<mark class = "name">age</mark> = 1;<br>
-                        &emsp;&emsp;<mark class = "name">weight</mark> = 0.22;<br>
-                        &emsp;&emsp;<mark class = "name">furColour</mark> = "orange";<br>
-                        &emsp;&emsp;<mark class = "name">vaccinated</mark> = false;<br>
-                        &emsp;}<br>
+                        &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "name">Cat</mark>(){<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">name</mark> = "kitty";<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">age</mark> = 1;<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">weight</mark> = 0.22;<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">furColour</mark> = "orange";<br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">vaccinated</mark> = false;<br>
+                        &emsp;&emsp;}<br>
                         }<br>
                         <br><br>
                         <mark class = "comment">/** In a seperate class, an object of the cat class can be made*/ </mark><br>
                         Cat kitty = new Cat("MiMi");<br>
-                        Cat ashy; <mark class = "comment">/** This object does not call the constructor, and so it currently has NULL value*/&emsp;</mark><br>
+                        Cat ashy; <mark class = "comment">/** This object does not call the constructor, and so it currently has NULL value*/&emsp;&emsp;</mark><br>
                     </p>
                 </code>
             </div>
@@ -214,9 +213,9 @@
         <code>
             <p class = "code">
                 <mark class = "keyw">public class</mark> <mark class = "name">Subclass</mark> extends Superclass{ <br>
-                    &emsp;<mark class = "keyw">public</mark> <mark class = "name">Subclass</mark>(){ <br>
-                        &emsp;&emsp;<mark class = "name">super</mark>(); <br>
-                    &emsp;}<br>
+                    &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "name">Subclass</mark>(){ <br>
+                        &emsp;&emsp;&emsp;&emsp;<mark class = "name">super</mark>(); <br>
+                        &emsp;&emsp;}<br>
                 } <br>
             </p>
         </code>
@@ -272,7 +271,7 @@
                     Contact Info: <br>
                     School Email: kayla.lin3@student.tdsb.on.ca <br>
                     Personal Email: kylln2027@gmail.com <br>
-                    03/24/2023
+                    06/12/2023
                 </p>
             </div>   
         </footer>

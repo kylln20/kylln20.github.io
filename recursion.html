@@ -22,18 +22,89 @@
         </div>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
+        <a href = "isp.html"> ISP </a>
     </div> 
 
     <header>
         <h1>
-            Heading1
+            Recursion
         </h1>
     </header>
 
     <body style = "background-color: var(--whiteOff)">
         <hr>  
-        
-        
+        <div class = "text">
+            <p>
+                A widely applicable concept, recursion in coding is when a method/function indirectly or directly calls itself. It's useful in scenarios where the answer can be calculated by calculating the answer for a smaller task within that task. While recursion can generally be replaced with an iterative loop, sometimes recursion is the more easy implementation of a soluation. 
+            </p>
+        </div>
+
+        <h2>
+            Structure
+        </h2>
+        <div class = "text">
+            <p>
+                In a recursive method, either it performs the action done during some base case, or it calls itself with updated parameters, where the parameters are getting closer to the base case. This is important because otherwise, our factorial function would just call itself, again, and again, and again, and again... until the computer decides to tell our code to stop. The code would crash, and you wouldn't get the answer you want. In theory, it sounds confusing, so below are a few examples of applications of recursion.
+            </p>
+        </div>
+        <h2>
+            Examples
+        </h2>
+        <h3>
+            Factorial
+        </h3>
+        <div>
+            <div>
+                <code>
+                    <p class = "code">
+                    &emsp;&emsp;<mark class = "comment">/*Code below sourced from https://www.geeksforgeeks.org/java-program-to-find-factorial-of-a-number-recursively/*/</mark><br>
+                    &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "datat">int</mark> <mark class = "name">factorial</mark>(<mark class = "datat">int</mark> <mark class = "name">n</mark>){<br>
+                    &emsp;&emsp;&emsp;&emsp;<mark class = "keyw">if</mark> (<mark class = "name">n</mark> == 1 || <mark class = "name">n</mark> == 0){<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<mark class = "keyw">return</mark> 0;<br>
+                    &emsp;&emsp;&emsp;&emsp;}<br>
+                    &emsp;&emsp;&emsp;&emsp;<mark class = "keyw">return</mark> <mark class = "name">n</mark>*<mark class = "name">factorial</mark>(<mark class = "name">n</mark>-1);<br>
+                    &emsp;&emsp;}
+                    </p>
+                </code>
+            </div>
+            <div class = "text">
+                <p>
+                    A factorial (represented as n!, n being a positive integer) is the product of all integers from 1 to n, including n. For example, if you had 3!, it would be equal to 3x2x1.<br>
+                    The recursive solution takes advantage of the fact that n! is related to (n-1)!. For example, 3! is equal to 3x2x1. 2x1 is equal to 2!. So, 3! is equal to 3x2!.<br>
+                    The code follows a similar process. To find the factorial of a value n, you find the factorial of n-1, then multiply it by n.<br>
+                    <br>
+                    Here, the base case is at n=0 or at n=1, since factorials are limited to positive integer values. The action performed is multiplication by n, and the parameter getting closer to the base case is the parameter decreasing by an increment of 1.
+                </p>
+            </div>
+        </div>
+
+        <h3>
+            Decimal to Binary Conversion
+        </h3>
+        <div>
+            <div>
+                <code>
+                    <p class = "code">
+                    &emsp;&emsp;<mark class = "keyw">public</mark> <mark class = "datat">int</mark> <mark class = "name">binary</mark>(<mark class = "datat">int</mark> <mark class = "name">n</mark>){<br>
+                    &emsp;&emsp;&emsp;&emsp;<mark class = "keyw">if</mark> (<mark class = "name">n</mark> == 0 ){<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<mark class = "keyw">return</mark> 0;<br>
+                    &emsp;&emsp;&emsp;&emsp;}<br>
+                    &emsp;&emsp;&emsp;&emsp;<mark class = "keyw">return</mark> <mark class = "name">n</mark> % 2 + 10 *<mark class = "name">binary</mark>(<mark class = "name">n</mark> / 2);<br>
+                    &emsp;&emsp;}
+                    </p>
+                </code>
+            </div>
+            <div class = "text">
+                <p>
+                    Binary, or base 2, is the representation of numbers with only 2 digits, 1 and 0. Like how each position in a decimal number is a power of 10 (eg. 1234 is equal to 1 x 10<sup>3</sup> + 2 x 10<sup>2</sup> + 3 x 10<sup>1</sup> + 5 x 10<sup>0</sup>), each position in a binary number is representative of an amount of a power of 2.<br>
+                    For example, 1010 in binary is equal to 1 x 2<sup>3</sup> + 0 x 2<sup>2</sup> + 1 x 2<sup>1</sup> + 0 x 2<sup>0</sup>. 2<sup>3</sup> is equal to 8, and 2<sup>1</sup> is equal to 2. So 1010 in binary is equal to 8 + 0 + 2 + 0 = 10.
+                    Theres a very algorithmic process to converting decimal values to binary values, as you can see.<br><br>
+                    Here, the base case is when n = 0. At that point, no more further division of n is necessary. One would have reached the "ones" digit of the binary number.<br>
+                    The action done is adding n%2. The lowest digit of a binary number to decimal number conversion can be found as whether or not that number is divisible by 2. If the decimal number is even, then there is no 2<sup>0</sup> in it's binary sum, so the last digit is equal to 0. On the other hand, if the decimal number is odd, then it is the sum of many even powers of 2, plus 1. That 1, equates to 1 x 2<sup>0</sup> in the binary sum, making the last digit equal to 1.<br>
+                    The decrement in this case is a division, n/2. 
+                </p>
+            </div>
+        </div>
     </body>
     <footer>
         <div class = "endNote">
@@ -41,7 +112,7 @@
                 Contact Info: <br>
                 School Email: kayla.lin3@student.tdsb.on.ca <br>
                 Personal Email: kylln2027@gmail.com <br>
-                03/24/2023
+                06/12/2023
             </p>
         </div>
     </footer>

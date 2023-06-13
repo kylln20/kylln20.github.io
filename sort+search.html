@@ -22,6 +22,7 @@
         </div>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
+        <a href = "isp.html"> ISP </a>
     </div> 
 
     <header>
@@ -34,7 +35,39 @@
         <hr>  
         <div class = "text">
             <p>
-                While there are helpful array and arraylist methods that exist, it is still good to know how to sort the values in these data structures. Below is descriptions, pseudocode, and actual code snippets for some searching and sorting algorithms. Note: some of these algorithms use recursion. <a href = "recursion.html">To learn more about recursion, click this text</a> 
+                While there are helpful array and arraylist methods that exist, it is still good to know how to sort the values in these data structures. Below are descriptions for some searching and sorting algorithms. Note: some of these algorithms use recursion. <a href = "recursion.html">To learn more about recursion, click this text</a> 
+            </p>
+        </div>
+
+        <h2>
+            Linear Search
+        </h2>
+        <div class = "text">
+            <p>
+                Linear search works by going through every single value in an array, and comparing it to the value being searched for. If the examined value is the value we're looking for, then great! If it isn't, the algorithm goes on to check the next element in the array. If the algorithm has reached the end of the array, and still hasn't found the value being searched for, then the code knows that that value isn't in the array. Linear search, due to it's simplicity, works well with just a for or while loop. 
+            </p>
+        </div>
+
+        <h2>
+            Selection Sort
+        </h2>
+        <div class = "text">
+            <p>
+                Selection sort works by finding the next minimum value in an array/arraylist, and pushing it to the end.<br>
+                For example, given the array {2, 1, 4, 3, 5}, Selection sort would first find the minimum, 1, and push it to the front.<br>
+                &emsp;&emsp;{2, 1, 4, 3, 5} -> {1, 2, 4, 3, 5}<br>
+                Then, it'd find the next minimum, 2. At this moment, 2 is already in place, so we don't need to move anything.<br>
+                The next minimum is 3. {1, 2, 4, 3, 5} would become {1, 2, 3, 4, 5}.<br>
+                While it is visible to the human eye that this array is now sorted, the code does not know this. So, it will perform the same action for 4. Then, with only 5 remaining, we can assume that it is the maximum value in the array, and that it is at the end.<br>
+            </p>
+        </div>
+
+        <h2>
+            Binary Search
+        </h2>
+        <div class = "text">
+            <p>
+                Binary search works by, given a sorted array, splitting that array in half, again and again until reaching the value that is being looked for, or until the array is reduced to 0, meaning that the searched for value isn't in the array.<br> This action of splitting again and again until a base case makes binary search a very good candidate for implementation of recursion.
             </p>
         </div>
     </body>
@@ -44,7 +77,7 @@
                 Contact Info: <br>
                 School Email: kayla.lin3@student.tdsb.on.ca <br>
                 Personal Email: kylln2027@gmail.com <br>
-                03/24/2023
+                06/12/2023
             </p>
         </div>
     </footer>

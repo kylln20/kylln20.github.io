@@ -22,6 +22,7 @@
         </div>
         <a href = "aboutMe.html"> About Me</a>
         <a href = "bibliography.html"> Bibliography </a>
+        <a href = "isp.html"> ISP </a>
     </div> 
 
     <header>
@@ -32,7 +33,6 @@
 
     <body style = "background-color: var(--whiteOff)">
         <hr>  
-        <h3>Table of Contents Here</h3>
         <h2>Basics</h2>
         <div class = "text">
             <p>
@@ -59,9 +59,9 @@
                 When <strong>initializing</strong> an array, either length can be set or values can be set<br>
                 <br>
                 To set length after a declaration:<br>
-                &emsp;&emsp;arrayName = new dataType[length];<br>
+                &emsp;&emsp;&emsp;&emsp;arrayName = new dataType[length];<br>
                 To set length with a declaration:<br>
-                &emsp;&emsp;dataType[] arrayName = new dataType[length];<br><br>
+                &emsp;&emsp;&emsp;&emsp;dataType[] arrayName = new dataType[length];<br><br>
                 When this is done, all elements in the array will be set to the default value for that data type. For example: <br>
                 <ul>
                     <li>int array elements are set to 0</li>
@@ -70,9 +70,9 @@
                 </ul>
 
                 To set values after a declaration:<br>
-                &emsp;&emsp;arrayName = {element1, element2, element3, ...};<br>
+                &emsp;&emsp;&emsp;&emsp;arrayName = {element1, element2, element3, ...};<br>
                 To set values with a declaration:<br>
-                &emsp;&emsp;dataType[] arrayName = {element1, element2, element3, ...};<br>
+                &emsp;&emsp;&emsp;&emsp;dataType[] arrayName = {element1, element2, element3, ...};<br>
             </p>
         </div>
         <code>
@@ -93,7 +93,7 @@
                 If an index is used that doesn't exist for an array, one's code won't compile. This error is called an ArrayIndexOutOfBoundsException.<br>
                 <br>
                 Example: Say that there is an array of pet names<br>
-                &emsp;&emsp;String[] catNames = {"Jiji", "Haku", "Totoro", "Teto", "Susu"};
+                &emsp;&emsp;&emsp;&emsp;String[] catNames = {"Jiji", "Haku", "Totoro", "Teto", "Susu"};
                 <table>
                     <tr>
                         <th>Indexes</th>
@@ -175,19 +175,19 @@
                 <p class = "code">
                     <mark class = "comment">/** an array passed as a param */</mark><br>
                     <mark class = "keyw">public void</mark> <mark class = "name">displayCatNames</mark>(<mark class = "datat">Cat</mark>[] <mark class = "name">names</mark>){<br>
-	                &emsp;<mark class = "keyw">for</mark>(<mark class = "datat">int</mark> i = 0; i &lt; <mark class = "name">names</mark>.length(); i++){<br>
-		            &emsp;&emsp;<mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">names</mark>[i].<mark class = "name">getName</mark>());<br>
-	                &emsp;}<br>
+                    &emsp;&emsp;<mark class = "keyw">for</mark>(<mark class = "datat">int</mark> i = 0; i &lt; <mark class = "name">names</mark>.length(); i++){<br>
+                    &emsp;&emsp;&emsp;&emsp;<mark class = "datat">System</mark>.<mark class = "keyw">out</mark>.<mark class = "name">println</mark>(<mark class = "name">names</mark>[i].<mark class = "name">getName</mark>());<br>
+                    &emsp;&emsp;}<br>
                     }<br>
                     <br>
                     <mark class = "comment">/** an array as a return type */</mark><br>
                     <mark class = "keyw">public</mark> <mark class = "datat">boolean</mark>[] <mark class = "name">shortNames</mark>(){<br>
-                    &emsp;<mark class = "datat">boolean</mark>[] <mark class = "name">isShort</mark> = new <mark class = "datat">boolean</mark>[<mark class = "name">names</mark>.length];<br>
-                    &emsp;<mark class = "keyw">for</mark>(<mark class = "datat">int</mark> i = 0; i &lt; <mark class = "name">names</mark>.length(); i++){<br>
-                        &emsp;&emsp;<mark class = "keyw">if</mark>(<mark class = "name">name</mark>[i].length &lt; 5){<br>
-                        &emsp;&emsp;&emsp;<mark class = "name">isShort</mark>[i] = true;<br>
-                        &emsp;&emsp;}<br>
-                        &emsp;}<br>
+                    &emsp;&emsp;<mark class = "datat">boolean</mark>[] <mark class = "name">isShort</mark> = new <mark class = "datat">boolean</mark>[<mark class = "name">names</mark>.length];<br>
+                    &emsp;&emsp;<mark class = "keyw">for</mark>(<mark class = "datat">int</mark> i = 0; i &lt; <mark class = "name">names</mark>.length(); i++){<br>
+                    &emsp;&emsp;&emsp;&emsp;<mark class = "keyw">if</mark>(<mark class = "name">name</mark>[i].length &lt; 5){<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<mark class = "name">isShort</mark>[i] = true;<br>
+                    &emsp;&emsp;&emsp;&emsp;}<br>
+                    &emsp;&emsp;}<br>
                     }<br>
                 </p>
             </code>
@@ -246,7 +246,7 @@
                 Contact Info: <br>
                 School Email: kayla.lin3@student.tdsb.on.ca <br>
                 Personal Email: kylln2027@gmail.com <br>
-                03/24/2023
+                06/12/2023
             </p>
         </div>
     </footer>
