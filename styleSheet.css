@@ -11,7 +11,6 @@
     --datat: #af76db;
     --num: #EEE060;
     --keyw: #6368e4;
-    --name:#d86767;
 }  
 
 body {
@@ -167,9 +166,9 @@ a:hover{
     color: var(--datat);
 }
 
-.name{
+.red{
     background-color: var(--blueDark);
-    color: var(--name);
+    color: var(--red);
 }
 
 .value{
